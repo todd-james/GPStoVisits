@@ -1,15 +1,18 @@
 # GPStoVisits
 This is the pipeline process that will take raw GPS data, clean them, input into the Lachesis visit detection and push data to a DB
 
-# Execution 
-Ensure you have environment variables set for:
-- Raw data filepath (rawdata_path)
-- Clean data filepath (cleandata_path)
-- Postgres host (pg_host)
-- Postgres port (pg_port)
-- Postgres user (pg_user)
+# Requirements 
+- [Lachesis Visit Detection](https://github.com/hamishgibbs/lachesis) algorithm 
+- Environment Variables: 
+	- Raw data filepath (rawdata_path)
+	- Clean data filepath (cleandata_path)
+	- Postgres host (pg_host)
+	- Postgres port (pg_port)
+	- Postgres user (pg_user)
 
 This should be set up in a local .env file.  
+
+# Execution
 
 To execute this pipline, run `snakemake -j<No. cores>`
 
