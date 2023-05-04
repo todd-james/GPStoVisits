@@ -1,7 +1,16 @@
 # GPStoVisits
 This is the pipeline process that will take raw GPS data, clean them, input into the Lachesis visit detection and push data to a DB
 
-To execute this pipline, run `snakemake -j[1-10]`
+# Execution 
+Ensure you have environment variables set for:
+- Raw data filepath (rawdata_path)
+- Clean data filepath (cleandata_path)
+- Postgres host (pg_host)
+- Postgres port (pg_port)
+- Postgres user (pg_user)
+This should be set up in a local .env file.  
+
+To execute this pipline, run `snakemake -j<No. cores>`
 
 The Snakefile goes through a series of processes, which are as follows: 
 1. Clean the raw GPS data in using the script [clean_input.py](clean_input.py) in rule clean_raw
