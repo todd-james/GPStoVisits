@@ -10,7 +10,15 @@ This is the pipeline process that will take raw GPS data, clean them, input into
 	- Postgres port (pg_port)
 	- Postgres user (pg_user)
 
-This should be set up in a local .env file.  
+This should be set up in a local .env file, that may look something like this:
+```
+rawdata_path="<PATH>"
+cleandata_path="<PATH>"
+pg_host="<HOST>"
+pg_port="<PORT>"
+pg_user="<USER>"
+```  
+and can be initialised by running `export $(cat .env | xargs)`
 
 # Execution
 
