@@ -8,10 +8,12 @@ Ensure you have environment variables set for:
 - Postgres host (pg_host)
 - Postgres port (pg_port)
 - Postgres user (pg_user)
+
 This should be set up in a local .env file.  
 
 To execute this pipline, run `snakemake -j<No. cores>`
 
+## General Summary 
 The Snakefile goes through a series of processes, which are as follows: 
 1. Clean the raw GPS data in using the script [clean_input.py](clean_input.py) in rule clean_raw
 2. Run the [Lachesis](https://github.com/hamishgibbs/lachesis) visit detection rust API
